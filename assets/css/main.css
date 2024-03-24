@@ -1,0 +1,112 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.navbar {
+    display: flex;
+    background-color: black;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar--brand-logo img {
+    width: 100%;
+    height: 3rem;
+    margin: 0.5rem;
+    margin-bottom: 0;
+}
+
+.navbar--brand-title {
+    font-size: 1rem;
+}
+
+.navbar--links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar--links li {
+    list-style: none;
+}
+
+.navbar--links li a {
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    display: block;
+}
+
+.navbar--links li:hover {
+    background-color: gray;
+}
+
+.navbar--toggle-menu {
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.navbar--toggle-menu .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media screen and (max-width:519px) {
+    .navbar--toggle-menu {
+        display: flex;
+    }
+
+    .navbar--links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar--links ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar--links li {
+        text-align: center;
+    }
+
+    .navbar--links li a {
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar--links.active {
+        display: flex;
+    }
+
+    .navbar--brand-title{
+        display: none;
+    }
+}
+
+@media screen and (max-width:768px) and (min-width:520px) {
+    .navbar--brand-title {
+        font-size: 0.5rem;
+    }
+
+
+}
